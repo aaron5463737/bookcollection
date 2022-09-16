@@ -31,15 +31,5 @@ RSpec.describe 'Creating a book', type: :feature do
     visit books_path
     expect(page).to have_content(25.48)
   end
-
-  scenario 'valid price2' do 
-    visit new_book_path
-    fill_in 'Title', with: 'Harry Potter'
-    fill_in 'Author', with: 'J.K. Rowling'
-    fill_in 'Price', with: 25.48
-    click_on 'Create Book'
-    visit books_path
-    expect(page).to have_content(25.48)
-  end
   
 end
